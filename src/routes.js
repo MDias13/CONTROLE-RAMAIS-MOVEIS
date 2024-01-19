@@ -1,13 +1,12 @@
 const express=  require('express');
 const router = express.Router();
+const RamalController = require('../src/controllers/RamalController')
 
-const CarroController = require('./controllers/CarroController')
-
-router.get('/carros',CarroController.buscarTodos);
-router.get('/carros/:id',CarroController.buscarPorId);
-router.post('/inserir-carro',CarroController.inserir);
-router.put('/atualizar-carro/:id',CarroController.atualizar);
-
+router.get('/ramais',RamalController.buscarTodos);
+router.get('/ramais/:id',RamalController.buscarPorId);
+router.post('/cadastrar-ramais',RamalController.criarRamal);
+router.put('/editar-ramais',RamalController.atualizarRamal);
+router.delete('/deletar-ramais/:id',RamalController.apagarRamal);
 
 
 
